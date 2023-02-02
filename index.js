@@ -18,7 +18,7 @@ document.querySelectorAll('#game-folder').forEach(function(el) {
             color: #ffa801;
           }
         </style>
-        
+
         <div class="sweet-alert-text-container">
         <br>
           <p><b>Game folder for Steam</b><br></br>Open Steam > Go to your Library > Right click Subnautica > Manage > Browse Local Files</p>
@@ -31,4 +31,34 @@ document.querySelectorAll('#game-folder').forEach(function(el) {
       `
     });
   });
+});
+
+document.getElementById("5").addEventListener("click", function(){
+  let icon = this.querySelector("i");
+  
+  icon.classList.toggle("fa-angle-down");
+  icon.classList.toggle("fa-angle-up");
+  
+  let image = document.getElementById("img5");
+  
+  if (image.style.display === "none") {
+    image.style.display = "block";
+  } else {
+    image.style.display = "none";
+  }
+});
+
+document.getElementById("3").addEventListener("click", function(){
+  let icon = this.querySelector("i");
+  
+  icon.classList.toggle("fa-angle-down");
+  icon.classList.toggle("fa-angle-up");
+  
+  let image = document.getElementById("img3");
+  
+  if (image.style.display === "none") {
+    image.style.display = "block";
+  } else {
+    image.style.display = "none";
+  }
 });
