@@ -33,32 +33,25 @@ document.querySelectorAll('#game-folder').forEach(function(el) {
   });
 });
 
-document.getElementById("5").addEventListener("click", function(){
-  let icon = this.querySelector("i");
-  
-  icon.classList.toggle("fa-angle-down");
-  icon.classList.toggle("fa-angle-up");
-  
-  let image = document.getElementById("img5");
-  
-  if (image.style.display === "none") {
-    image.style.display = "block";
-  } else {
-    image.style.display = "none";
-  }
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll("img");
+  images.forEach(function (img) {
+      img.style.display = "none";
+  });
 
-document.getElementById("3").addEventListener("click", function(){
-  let icon = this.querySelector("i");
-  
-  icon.classList.toggle("fa-angle-down");
-  icon.classList.toggle("fa-angle-up");
-  
-  let image = document.getElementById("img3");
-  
-  if (image.style.display === "none") {
-    image.style.display = "block";
-  } else {
-    image.style.display = "none";
-  }
+  const anchors = document.querySelectorAll("a");
+  anchors.forEach(function (anchor) {
+      anchor.addEventListener("click", function () {
+          const id = this.getAttribute("id");
+          const img = document.querySelector("#img" + id);
+          const icon = this.firstChild;
+          if (img.style.display === "none") {
+              img.style.display = "block";
+              icon.className = "fa-solid fa-angle-down";
+          } else {
+              img.style.display = "none";
+              icon.className = "fa-solid fa-angle-up";
+          }
+      });
+  });
 });
