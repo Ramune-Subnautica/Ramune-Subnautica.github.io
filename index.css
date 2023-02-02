@@ -176,19 +176,8 @@ html, body {
     margin-bottom: 0.4em;
   }
 
-  #img5 {
-    margin-left: -3em;
-  }
-
-  #img3, #img5 {
-    display: none;
-    transition: opacity 0.5s ease-in-out;
-  }
   
-  #img3.show, #img5.show {
-    display: block;
-    opacity: 1;
-  }
+
 
 /*----------------------------------------------------------------*/
 
