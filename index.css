@@ -140,6 +140,10 @@ html, body {
 
   .list div {
     color: #cfcfcf;
+    outline: #272726;
+    outline-style: solid;
+    outline-width: 0.1em;
+    outline-offset: 0.8em;
   }
   
   .list div:before {
@@ -163,14 +167,6 @@ html, body {
     color: #ffc670;
     text-decoration: none;
 
-  }
-
-  #description {
-    color: #cfcfcf;
-  }
-
-  #description b {
-    color: #ff9900;
   }
 
   img {
