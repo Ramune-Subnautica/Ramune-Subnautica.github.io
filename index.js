@@ -1,3 +1,23 @@
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".buttons_ a");
+
+buttons.forEach(button => {
+  button.addEventListener("mouseenter", () => {
+    gsap.to(button, {duration: 0.4, scale: 1.03, ease: "power1.out"});
+  });
+  button.addEventListener("mouseleave", () => {
+    gsap.to(button, {duration: 0.4, scale: 1, ease: "power1.in"});
+  });
+});
+
+gsap.fromTo("body", {opacity: 0, scale: 0}, {delay: 1.5, duration: 1, opacity: 1, scale: 1});
+
+
 document.querySelectorAll('#game-folder').forEach(function(el) {
   el.addEventListener('click', function() {
     Swal.fire({
@@ -32,6 +52,11 @@ document.querySelectorAll('#game-folder').forEach(function(el) {
     });
   });
 });
+});
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll("img");
