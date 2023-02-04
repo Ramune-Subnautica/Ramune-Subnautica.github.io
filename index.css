@@ -43,6 +43,21 @@ html, body {
     background-clip: text;
   }
 
+  #title-bz {
+    font-size: 2.5em;
+    font-weight: 1000;
+    margin-bottom: 0.1em;
+    margin-top: 2.6em;
+
+    color: white;
+    text-align: center;
+
+    background: linear-gradient(to right, #34eafbf3, #01a9c3f3, #00b1cdf3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
   #header {
     font-size: 1.1em;
     margin-bottom: 0.2em;
@@ -148,7 +163,15 @@ html, body {
     outline-width: 0.1em;
     outline-offset: 0.86em;
   }
-  
+
+  .list-bz div {
+    color: #cfcfcf;
+    outline: #272726;
+    outline-style: solid;
+    outline-width: 0.1em;
+    outline-offset: 0.86em;
+  }
+
   .list div:before {
       content: counter(item) ". ";
       counter-increment: item;
@@ -157,6 +180,16 @@ html, body {
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
+  }
+
+  .list-bz div:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+
+    background: linear-gradient(to right, #34eafbf3, #01a9c3f3, #00b1cdf3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   .list a {
@@ -169,7 +202,22 @@ html, body {
   .list a:hover {
     color: #ffc670;
     text-decoration: none;
+  }
+  
+  .list-bz a {
+    text-decoration: none;
+    transition: border 0.3s ease, color 0.3s ease;
+    cursor: pointer; 
 
+    background: linear-gradient(to right, #77d4fff3, #90dcfff3, #94ddfff3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .list-bz a:hover {
+    color: rgb(0, 200, 255);
+    text-decoration: none;
   }
 
   img {
@@ -217,4 +265,8 @@ nav a {
 
 nav a:hover {
   color: #ecb100
+}
+
+#nav-bz a:hover {
+  color: #4ac6ff
 }
